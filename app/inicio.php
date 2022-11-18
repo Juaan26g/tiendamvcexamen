@@ -4,8 +4,8 @@ ini_set('display_errors', 1);
 
 // Constantes iniciales
 define('ROOT', DIRECTORY_SEPARATOR);
-define('APP', ROOT . 'app' . DIRECTORY_SEPARATOR);
-define('URL', '/var/www/tiendamvc/');
+define('APP', 'app' . DIRECTORY_SEPARATOR);
+define('URL', '/var/www/tiendamvcexamen/');
 define('VIEWS', URL . APP . 'views/');
 define('ENCRIPTKEY', 'elperrodesanroque');
 

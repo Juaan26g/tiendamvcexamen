@@ -19,7 +19,11 @@
                     <td class="text-center"><?= $product->id ?></td>
                     <td class="text-center"><?= $data['type'][$product->type - 1]->description ?></td>
                     <td class="text-center"><?= $product->name ?></td>
-                    <td class="text-center"><?= html_entity_decode($product->description) ?></td>
+                    <?php if (strlen($product->description) >= 30): ?>
+                    <td class="text-center"><?=  html_entity_decode(substr($product->description, 0, 30)) ?></td>
+                    <?php else: ?>
+                    <td class="text-center"><?=  html_entity_decode($product->description) ?></td>
+                    <?php endif; ?>
                     <td class="text-center">
                         <a href="<?= ROOT ?>adminProduct/update/<?= $product->id ?>"
                            class="btn btn-info"

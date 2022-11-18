@@ -54,6 +54,7 @@ class ShopController extends Controller
             'errors' => [],
             'data' => $product,
             'user_id' => $session->getUserId(),
+           
         ];
 
         $this->view('shop/show', $data);
